@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Quipux | Materias</title>
+    <link rel="shortcut icon" href="images/logo-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/a073273965.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="css/header.css" as="style">
+    <link rel="preload" href="css/info-materias.css" as="style">
+    <link rel="preload" href="css/table.css" as="style">
+    <link rel="preload" href="css/header-responsive.css" as="style">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/info-materias.css">
+    <link rel="stylesheet" href="css/header-responsive.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="#" class="container-logo"> <!-- Enlace hacia el index (Página principal) -->
+            <img src="images/logo-quipux-1.png" alt="Logo Quipux">
+        </a>
+        <a href="#" class="container-name-user"> <!-- Enlace hacia el perfil del usuario -->
+            <span>Miguel Angel Marín Mejía</span>
+            <img src="images/imagen-perfil-usuario.png" alt="Imagen de perfil">
+        </a>
+    </header>
+    <div class="main-flexbox">
+        <span class="material-symbols-outlined bars-menu" id="bars-menu">
+            sort
+        </span>
+        <aside class="container-menu" id="container-menu">
+            <span class="material-symbols-outlined exit-menu" id="exit-menu">
+                close
+            </span>
+            <nav>
+                <ul>
+                    <a href="#"><li class="item-menu">Estudiantes</li></a>
+                    <a href="#"><li class="item-menu">Grupos</li></a>
+                    <a href="materias.html"><li class="item-menu selected">Materias</li></a>
+                    <a href="#"><li class="item-menu">Evaluaciones</li></a>
+                    <a href="#"><li class="item-menu">Informes</li></a>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main">
+            <h1 class="title-page"><a href="materias.html">Administración de materias /</a> Geografía</h1> <!-- Se agrega el nombre de la materia -->
+            <section class="container-add-subject">
+                <h2>Informacion de la materia</h2>
+                <form class="form-inline add-subject" id="add-subject">
+                    <div>
+                        <label for="subject" class="title-field">Materia</label>
+                        <select name="subject" id="subject" class="field-filter">
+                            <!-- En el "value" se pone el código de la materia -->
+                            <option selected>Seleccionar</option>
+                            <option value="SOC001">Geografía</option>
+                            <option value="SOC002">Historia</option>
+                            <option value="SOC003">Filosofía</option>
+                            <option value="IDM001">Español</option>
+                            <option value="IDM003">Inglés</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="teacher" class="title-field">Profesor</label>
+                        <select name="teacher" id="teacher" class="field-filter">
+                            <option selected>Seleccionar</option>
+                            <!-- En el "value" se pone el documento de el profesor -->
+                            <option value="00000">Fabio León Restrepo</option>
+                            <option value="00001">Jaime Alberto Giraldo</option>
+                            <option value="00002">Adriana María Zuluaga</option>
+                            <option value="00003">Fabiola Ramírez</option>
+                            <option value="00004">Maria Dolores Smicth</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="course" class="title-field">Grado(s)</label>
+                        <select name="course" id="course" class="field-filter">
+                            <option selected></option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+            <section class="info">
+                <h2>Estudiantes</h2>
+                <div class="container-filter">
+                    <form class="form-inline" id="filter">
+                        <div>
+                            <label for="student" class="title-field">Estudiante</label>
+                            <select name="student" id="student" class="field-filter">
+                                <option selected>Seleccionar</option>
+                                <!-- En el value se pone el nombre del estudiante -->
+                                <option value="">Nombre del estudiante</option>
+                                <option value="">Nombre del estudiante</option>
+                                <option value="">Nombre del estudiante</option>
+                                <option value="">Nombre del estudiante</option>
+                                <option value="">Nombre del estudiante</option>
+                            </select>
+                        </div>
+        
+                        <div>
+                            <label for="cod-student" class="title-field">Código estudiante</label>
+                            <select name="cod-student" id="cod-student" class="field-filter">
+                                <option selected>Seleccionar</option>
+                                <!-- En el "value" se pone el código del estudiante -->
+                                <option value="">Código del estudiante</option>
+                                <option value="">Código del estudiante</option>
+                                <option value="">Código del estudiante</option>
+                                <option value="">Código del estudiante</option>
+                                <option value="">Código del estudiante</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Cuando haya conexión con la base de datos se le dará funcionalidad -->
+                        <input type="submit" value="Buscar" class="btn-filter">
+                        <span class="clean-filter">Limpiar filtros</span>
+                    </form>
+                </div>
+                <div class="container-table">
+                    <table class="table">
+                        <tr>
+                            <th class="table-titles">Código</th>
+                            <th class="table-titles">Estudiante</th>
+                            <th class="table-titles">Grado</th>
+                            <th class="table-titles">Grupo</th>
+                            <th class="table-titles">Estado</th>
+                            <th class="table-titles table-title-input">Nota promedio</th>
+                        </tr>
+                        <tr>
+                            <td>2022101</td>
+                            <td>Camila Fernández Rojas</td>
+                            <td>10</td>
+                            <td>A</td>
+                            <td>
+                                <select name="state" class="select-table">
+                                    <option selected>En curso</option>
+                                    <option>Aprobado</option>
+                                    <option>Reprobado</option>
+                                </select>
+                            </td>
+                            <td class="container-input-table">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2022102</td>
+                            <td>Juan Felipe Montoya Rios</td>
+                            <td>9</td>
+                            <td>C</td>
+                            <td>
+                                <select name="state" class="select-table">
+                                    <option selected>En curso</option>
+                                    <option>Aprobado</option>
+                                    <option>Reprobado</option>
+                                </select>
+                            </td>
+                            <td class="container-input-table">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2022103</td>
+                            <td>Luisa María Cruz Hernández</td>
+                            <td>9</td>
+                            <td>B</td>
+                            <td>
+                                <select name="state" class="select-table">
+                                    <option selected>En curso</option>
+                                    <option>Aprobado</option>
+                                    <option>Reprobado</option>
+                                </select>
+                            </td>
+                            <td class="container-input-table">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2022104</td>
+                            <td>Ana María Bedoya López</td>
+                            <td>8</td>
+                            <td>B</td>
+                            <td>
+                                <select name="state" class="select-table">
+                                    <option selected>En curso</option>
+                                    <option>Aprobado</option>
+                                    <option>Reprobado</option>
+                                </select>
+                            </td>
+                            <td class="container-input-table">
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2022105</td>
+                            <td>Santiago Sanches Rivera</td>
+                            <td>7</td>
+                            <td>A</td>
+                            <td>
+                                <select name="state" class="select-table">
+                                    <option selected>En curso</option>
+                                    <option>Aprobado</option>
+                                    <option>Reprobado</option>
+                                </select>
+                            </td>
+                            <td class="container-input-table">
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <div class="container-buttons">
+                <a href="materias.html"><button class="btn-cancel">Cancelar</button></a>
+                <!-- Se le dará una funcionalidad cuando haya conexión con la base de datos -->
+                <button class="btn-save">Guardar</button>
+            </div>                
+        </main>
+    </div>
+    <script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Estilos básicos de las secciones */
+.title-page{    
+    font-size: 16px;
+    font-weight: 100;
+    color: #555555;
+    padding: 20px 0;
+}
+
+.title-page a {
+    color: #009CDE;
+    text-decoration: none;
+}
+
+.container-add-subject , .info{
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px #00000029;
+    margin-bottom: 20px;
+}
+
+/* Titulo de las secciones */
+
+section h2 {
+    color: #009CDE;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el filtro */
+
+.container-filter{
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.form-inline{
+    width: max-content;
+}
+
+.form-inline div {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.title-field {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #545454;
+    margin-bottom: 4px;
+}
+
+.field-filter {
+    width: 100%;
+    border: none;
+    border: 1px solid #9FA6AD;
+    border-radius: 3px;
+    padding: 9px 10px;
+    color: #6A737C;
+    font-size: 14px;
+}
+
+.field-filter[name="subject"] , .field-filter[name="teacher"]{
+    width: 245px;
+}
+
+.clean-filter {
+    font-family: montserrat-semibold;
+    font-size: 14px;
+    color: #009CDE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.add-subject{
+    width: 100%;
+}
+
+.add-subject div{
+    margin-bottom: 10px;
+}
+
+/* Boton para usar el filtro */
+
+.btn-filter{
+    background-color: #009CDE;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: montserrat-semibold;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+/* Cambiando la barra de scroll del filtro*/
+
+.container-filter::-webkit-scrollbar{
+    background-color: transparent;
+    height: 5px;
+    border-top: 1px solid #016691
+}
+
+.container-filter::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background: #016691;
+}
+
+/* Modificando elementos de la tabla */
+
+.container-input-table {
+    text-align: center;
+}
+
+.table-title-input{
+    text-align: center;
+}
+
+.select-table,.table input[type="text"] {
+    width: 100%;
+    max-width: 135px;
+    padding: 9px 10px;
+    font-family: montserrat-regular;
+    font-size: 14px;
+    color: #6A737C;
+    border-radius: 3px;
+    border: 1px solid #9FA6AD;
+}
+
+/* Botones para guardar o cancelar el proceso */
+
+.container-buttons {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.container-buttons a {
+    text-emphasis: none;
+}
+
+.container-buttons button{
+    cursor: pointer;
+    font-family: montserrat-semibold;
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-cancel{
+    border: 1px solid #009DE0;
+    background: transparent;
+    color: #009CDE;
+    margin-right: 15px;
+}
+
+.btn-save {
+    border: none;
+    background-color: #009DE0;
+    color: #ffffff;
+}

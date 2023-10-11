@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Quipux | Materias</title>
+    <link rel="shortcut icon" href="images/logo-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/a073273965.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="css/header.css" as="style">
+    <link rel="preload" href="css/header-responsive.css" as="style">
+    <link rel="preload" href="css/materias.css" as="style">
+    <link rel="preload" href="css/table.css" as="style">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/table.css" type="text/css">
+    <link rel="stylesheet" href="css/materias.css" type="text/css">
+    <link rel="stylesheet" href="css/header-responsive.css">
+</head>
+<body>
+    <header class="main-header">
+        <a href="#" class="container-logo"> <!-- Enlace hacia el index (Página principal) -->
+            <img src="images/logo-quipux-1.png" alt="Logo Quipux">
+        </a>
+        <a href="#" class="container-name-user"> <!-- Enlace hacia el perfil del usuario -->
+            <span>Miguel Angel Marín Mejía</span>
+            <img src="images/imagen-perfil-usuario.png" alt="Imagen de perfil">
+        </a>
+    </header>
+    <div class="main-flexbox">
+        <span class="material-symbols-outlined bars-menu" id="bars-menu">
+            sort
+        </span>
+        <aside class="container-menu" id="container-menu">
+            <span class="material-symbols-outlined exit-menu" id="exit-menu">
+                close
+            </span>
+            <nav>
+                <ul>
+                    <a href="#"><li class="item-menu">Estudiantes</li></a>
+                    <a href="#"><li class="item-menu">Grupos</li></a>
+                    <a href="materias.html"><li class="item-menu selected">Materias</li></a>
+                    <a href="#"><li class="item-menu">Evaluaciones</li></a>
+                    <a href="#"><li class="item-menu">Informes</li></a>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main" id="parent-delete-box">
+            <div class="container-title-page">
+                <h1>Administración de materias</h1>
+                <!-- Cuando haya conexión con la base de datos se le dará funcionalidad -->
+                <a href="info-materias.html"><button class="add-subject"><span class="material-symbols-outlined">add_circle</span> Nuevo Registro</button></a>
+            </div>
+            <section class="container-filter">
+                <form class="filter" id="filter">
+                    <div>
+                        <label for="course" class="title-field">Grado</label>
+                        <select name="course" id="course" class="field-filter">
+                            <option selected>Seleccionar</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="group" class="title-field">Grupo</label>
+                        <select name="group" id="group" class="field-filter">
+                            <option selected>Seleccionar</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="subject" class="title-field">Materia</label>
+                        <select name="subject" id="subject" class="field-filter">
+                            <!-- En el "value" se pone el código de la materia -->
+                            <option selected>Seleccionar</option>
+                            <option value="SOC001">Geografía</option>
+                            <option value="SOC002">Historia</option>
+                            <option value="SOC003">Filosofía</option>
+                            <option value="IDM001">Español</option>
+                            <option value="IDM003">Inglés</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="teacher" class="title-field">Profesor</label>
+                        <select name="teacher" id="teacher" class="field-filter">
+                            <option selected>Seleccionar</option>
+                            <!-- En el "value" se pone el documento de el profesor -->
+                            <option value="00000">Fabio León Restrepo</option>
+                            <option value="00001">Jaime Alberto Giraldo</option>
+                            <option value="00002">Adriana María Zuluaga</option>
+                            <option value="00003">Fabiola Ramírez</option>
+                            <option value="00004">Maria Dolores Smicth</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Cuando haya conexión con la base de datos se le dará funcionalidad -->
+                    <input type="submit" value="Buscar" class="btn-filter">
+                    <span class="clean-filter">Limpiar filtros</span>
+                </form>
+            </section>
+            <section class="results">
+                <h2 class="title-results">Resultados</h2>
+                <div class="container-table">
+                    <table class="table">
+                        <tr>
+                            <th class="table-titles">Código</th>
+                            <th class="table-titles">Materia</th>
+                            <th class="table-titles">Profesor</th>
+                            <th class="table-titles">Grado</th>
+                            <th class="table-titles">Acciones</th>
+                        </tr>
+                        <tr>
+                            <td>SOC001</td>
+                            <td>Geografía</td>
+                            <td>Fabio León Restrepo</td>
+                            <td>6, 7, 8, 9, 10, 11</td>
+                            <td class="container-icon-table">
+                                <!-- 
+                                    El código de la materia se envia por el método GET 
+                                    Después en "info-materias.html" se obtiene el código y se muestra la información 
+                                -->
+                                <a href="info-materias.html?subject=SOC001"><img src="images/ic-show.svg" title="Ver detalles" class="icon-table"></a>
+                                <img src="images/ic-trash.svg" title="Eliminar" class="icon-table delete-subject">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SOC002</td>
+                            <td>Historia</td>
+                            <td>Jaime Alberto Giraldo</td>
+                            <td>6, 7, 8</td>
+                            <td class="container-icon-table">
+                                <a href="info-materias.html"><img src="images/ic-show.svg" title="Ver detalles" class="icon-table"></a>
+                                <img src="images/ic-trash.svg" title="Eliminar" class="icon-table delete-subject">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>SOC003</td>
+                            <td>Filosofía</td>
+                            <td>Adriana María Zuluaga</td>
+                            <td>9, 10, 11</td>
+                            <td class="container-icon-table">
+                                <a href="info-materias.html"><img src="images/ic-show.svg" title="Ver detalles" class="icon-table"></a>
+                                <img src="images/ic-trash.svg" title="Eliminar" class="icon-table delete-subject">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IDM001</td>
+                            <td>Español</td>
+                            <td>Fabiola Ramírez</td>
+                            <td>6, 7, 8, 9, 10, 11</td>
+                            <td class="container-icon-table">
+                                <a href="info-materias.html"><img src="images/ic-show.svg" title="Ver detalles" class="icon-table"></a>
+                                <img src="images/ic-trash.svg" title="Eliminar" class="icon-table delete-subject">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IDM003</td>
+                            <td>Ingles</td>
+                            <td>Maria Dolores Smicth</td>
+                            <td>6, 7, 8, 9, 10, 11</td>
+                            <td class="container-icon-table">
+                                <a href="info-materias.html"><img src="images/ic-show.svg" title="Ver detalles" class="icon-table"></a>
+                                <img src="images/ic-trash.svg" title="Eliminar" class="icon-table delete-subject">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <div class="container-delete-box" id="container-delete-box">
+                <div class="delete-box">
+                    <!-- El nombre de la materia varía -->  
+                    <span class="material-symbols-outlined exit-delete" id="exit-delete">
+                        close
+                    </span>
+                    <h2>Eliminar Geografía</h2>
+                    <p>¿Estás seguro de eliminar la materia?</p>
+                    <div class="container-buttons-delete">
+                        <button class="cancel-delete" id="cancel-delete">No</button>
+                        <!-- Cuando haya conexión con la base de datos se le dará funcionalidad -->
+                        <button class="continue-delete">Sí, eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/menu.js"></script>
+    <script src="js/delete-box.js"></script>
+</body>
+</html>

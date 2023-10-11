@@ -1,0 +1,135 @@
+/* Estilos varios */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: montserrat-medium;
+    src: url(fonts/Montserrat-Medium.otf);
+}
+@font-face{
+    font-family: montserrat-semibold;
+    src: url(fonts/Montserrat-SemiBold.otf);
+}
+@font-face{
+    font-family: montserrat-regular;
+    src: url(fonts/Montserrat-Regular.otf);
+}
+
+body{
+    min-width: 500px;
+    max-width: 2100px;
+    margin: auto;
+    font-family: montserrat-medium;
+    background-color: #F4F4F4;
+}
+
+/* Estilos del header */
+
+.main-header{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    box-shadow: 0 3px 6px #00000015;
+}
+
+.container-logo img {
+    width: 157px;
+}
+
+.container-name-user {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.container-name-user span{
+    color: #697075;
+    font-size: 14px;
+}
+
+.container-name-user img{
+    width: 29px;
+    height: 29px;
+    object-fit: cover;
+    object-position: center center;
+    margin-left: 15px;
+}
+
+/* Uniendo el aside y el main */
+
+.main-flexbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos del menu de navegacion */
+
+.container-menu {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    height: 100%;
+    background: #6A737C;
+    display: none;
+}
+
+.item-menu{
+    padding: 20px 14px;
+    font-size: 14px;
+    color: #f2f2f3;
+    text-decoration: none;
+}
+
+.container-menu nav ul a {
+    text-decoration: none;
+}
+
+.item-menu:hover{
+    background-color: #C8CCD0;
+    color: #555A5E;
+    transition: all .2s linear;
+}
+
+/* Item del menu seleccionado */
+
+.selected {
+    background-color: #C8CCD0;
+    color: #555A5E;
+}
+
+/* Barras del menu */
+
+
+.bars-menu, .exit-menu {
+    display: block;
+    font-size: 40px;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bars-menu{
+    color: #6A737C;
+    position: sticky;
+    top: 0;
+    left: 10px;
+}
+
+.exit-menu {
+    color: #ffffff;
+}
+
+/* Estilos del contenido principal */
+
+.main{
+    padding: 0 25px;
+    width: 100%;
+}

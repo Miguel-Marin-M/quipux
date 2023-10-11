@@ -1,0 +1,226 @@
+/* Secciones del main */
+
+.container-title-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.container-title-page h1 {
+    font-size: 16px;
+    font-weight: 100;
+    color: #555555;
+}
+
+.container-title-page a {
+    text-decoration: none;
+}
+
+.add-subject {
+    display: flex;
+    align-items: center;
+    font-family: montserrat-semibold;
+    border: none;
+    border: 1px solid #009DE0;
+    border-radius: 5px;
+    background: transparent;
+    padding: 9px 15px;
+    color: #009DE0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.add-subject:active{
+    background: #009DE0;
+    color: #ffffff;
+
+}
+
+.add-subject span {
+    margin-right: 10px;
+}
+
+/* Estilos básicos de las secciones */
+
+.container-filter , .results{
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px #00000029;
+    margin-bottom: 20px;
+}
+
+/* Seccion 1 (filter) */
+
+.container-filter {
+    overflow-x: auto;
+}
+
+.filter{
+    width: max-content;
+}
+
+.filter div {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.title-field {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color: #545454;
+    margin-bottom: 4px;
+}
+
+.field-filter {
+    width: 100%;
+    border: none;
+    border: 1px solid #9FA6AD;
+    border-radius: 3px;
+    padding: 9px 10px;
+    color: #6A737C;
+    font-size: 14px;
+}
+
+.field-filter[name="subject"] , .field-filter[name="teacher"]{
+    width: 245px;
+}
+
+.clean-filter {
+    font-family: montserrat-semibold;
+    font-size: 14px;
+    color: #009CDE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Boton para usar el filtro */
+
+.btn-filter{
+    background-color: #009CDE;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: montserrat-semibold;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+/* Cambiando la barra de scroll del filtro*/
+
+.container-filter::-webkit-scrollbar{
+    background-color: transparent;
+    height: 5px;
+    border-top: 1px solid #016691
+}
+
+.container-filter::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background: #016691;
+}
+
+/* Seccion 2 (results) */
+
+.results {
+    border-radius: 5px;
+}
+
+.title-results{
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* Modificando estilos de la tabla */
+
+.icon-table{
+    cursor: pointer;
+    box-sizing: content-box;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    padding: 6px;
+    margin-right: 16px;
+}
+
+.icon-table:hover{
+    transform: rotate(360deg);
+    transition: all .3s linear;
+}
+
+/* Caja para eliminar materias */
+
+.container-delete-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.702);
+}
+
+.delete-box {
+    background-color: #ffffff;
+    padding: 20px;
+    position: relative;
+    width: 330px;
+}
+
+.exit-delete {
+    position: absolute;
+    font-size: 18px;
+    right: 20px;
+    top: 20px;
+    color: #BFBFBF;
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete-box h2{
+    font-size: 16px;
+    font-weight: 100;
+    padding-bottom: 15px;
+    color: #2C2C2C;
+    border-bottom: 1px solid #919191;
+    margin-bottom: 15px;
+}
+
+.delete-box p {
+    font-family: montserrat-regular;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.container-buttons-delete {
+    text-align: right;
+}
+
+.container-buttons-delete button{
+    cursor: pointer;
+    font-family: montserrat-semibold;
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.cancel-delete{
+    border: 1px solid #009DE0;
+    background: #fff;
+    color: #009CDE;
+}
+
+.continue-delete {
+    border: none;
+    background-color: #009DE0;
+    color: #ffffff;
+}

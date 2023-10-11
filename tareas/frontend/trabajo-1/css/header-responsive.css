@@ -1,0 +1,26 @@
+/* Estilos necesarios para el diseño responsive */
+
+@media screen and (min-width: 970px) {
+    .main {
+        width: calc(100% - 250px);
+        min-width: 500px;
+    }
+    .container-menu{
+        display: block;
+        position: relative;
+        transform: translateX(0);
+        height: auto;
+    }
+    .bars-menu{
+        display: none;
+    }
+    .exit-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-height: 700px) {
+    .container-menu{
+        height: 100vh;
+    }
+}

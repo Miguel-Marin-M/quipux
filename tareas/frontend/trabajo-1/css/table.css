@@ -1,0 +1,53 @@
+/* Estilos para la tabla */
+
+.container-table{
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    border-radius: 3px;
+    overflow: hidden;
+    font-family: montserrat-regular;
+    font-size: 14px;
+}
+
+.table tr:nth-child(even){
+    background-color: #F9F9F9;
+}
+
+.table tr:first-child{
+    background: #016691;
+}
+
+.table-titles{
+    font-family: montserrat-medium;
+    color: #ffffff;
+    font-weight: 100;
+    padding: 15px 3px; 
+    text-align: left;
+}
+
+.table-titles:first-child, td:first-child{
+    padding-left: 20px;
+}
+
+td{
+    padding: 17px 5px;
+    min-width: 125px;
+}
+
+/* Cambiando barra de scroll */ 
+
+.container-table::-webkit-scrollbar{
+    background-color: transparent;
+    height: 5px;
+    border-top: 1px solid #016691
+}
+
+.container-table::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background: #016691;
+}
